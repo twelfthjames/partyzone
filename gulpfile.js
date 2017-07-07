@@ -2,7 +2,10 @@ const gulp = require('gulp'),
       gls = require('gulp-live-server'),
       concat = require('gulp-concat'),
       minifyHtml = require('gulp-htmlmin'),
-      sass = require('gulp-sass');
+      sass = require('gulp-sass'),
+      rename = require('gulp-rename'),
+      uglify = require('gulp-uglify'),
+      watch = require('gulp-watch');
 
 gulp.task('minify', function(){
     return gulp.src('app/**/*.html')
@@ -10,8 +13,24 @@ gulp.task('minify', function(){
         .pipe(gulp.dest('build'));
 });
 
+gulp.task('scripts', function(){
+    return gulp.src(['app/**/*.js'])
+        .pipe(concat('build.js'))
+        .pipe(uglify())
+        .pipe(rename({
+            basename: 'bundle',
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('build/js'));
+});
+
 gulp.task('serve', function(){
-    const server = gls.static('build', 3000);
+    var server = gls.static(['build']);
+    server.start();
+
+    return watch(['build/**/*.css', 'build/**/*.html', 'build/**/*.js'], function(file){
+        server.notify.apply(server, [file]);
+    });
 });
 
 gulp.task('styles', function(){
@@ -20,4 +39,4 @@ gulp.task('styles', function(){
         .pipe(gulp.dest('build/css'))
 });
 
-gulp.task('default', ['styles', 'serve']);
+gulp.task('default', ['scripts','styles','minify','serve']);

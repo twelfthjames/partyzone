@@ -26,8 +26,11 @@
     "gulp-live-server": "0.0.30",
     "gulp-minify-html": "^1.0.6",
     "gulp-ng-annotate": "^2.0.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1"
   },
   "dependencies": {
