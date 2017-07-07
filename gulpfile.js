@@ -1,11 +1,12 @@
 const gulp = require('gulp'),
       gls = require('gulp-live-server'),
-      htmlmin = require('gulp-htmlmin'),
+      concat = require('gulp-concat'),
+      minifyHtml = require('gulp-htmlmin'),
       sass = require('gulp-sass');
 
 gulp.task('minify', function(){
     return gulp.src('app/**/*.html')
-        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(minifyHtml({collapseWhitespace: true}))
         .pipe(gulp.dest('build'));
 });
 
