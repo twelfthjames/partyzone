@@ -39,4 +39,11 @@ gulp.task('styles', function(){
         .pipe(gulp.dest('build/css'))
 });
 
-gulp.task('default', ['scripts','styles','minify','serve']);
+gulp.task('watch', function(){
+    return gulp.watch('app/**/*', ['styles', 'minify', 'scripts'])
+    .on('change', function(event){
+        console.log('File' + event.path + ' was ' + event.type + '.')
+    });
+});
+
+gulp.task('default', ['scripts','styles','minify','serve','watch']);
