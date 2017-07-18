@@ -1,4 +1,8 @@
+@import 'vendor/normalize';
+
 @import 'modules/colors';
 @import 'modules/typography';
+@import 'modules/mixins';
 
 @import 'partials/base';
+@import 'partials/overview';

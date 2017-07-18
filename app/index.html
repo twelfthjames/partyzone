@@ -8,8 +8,10 @@
 
     <link rel="stylesheet" href="./css/style.css?v=1.0.0">
 </head>
-<body>
-    <ng-view></ng-view>
+<body data-ng-controller="partyZoneController as ctrl">
+    <header id="header" ng-include="'includes/header.html'"></header>
+
+    <zone-overview></zone-overview>
 
     <script src="./js/bundle.min.js"></script>
 </body>

@@ -2,3 +2,23 @@ body {
     background: $zone-grey;
     color: $black;
 }
+
+#header {
+    @include boxShadow;
+    position: fixed;
+    top: 0;
+    background: $white;
+    width: 100%;
+    height: 100px;
+
+    #logo {
+        position: relative;
+        top: 10px;
+        margin: 0 auto;
+        width: 130px;
+        
+        img {
+            width: inherit;
+        }
+    }
+}
