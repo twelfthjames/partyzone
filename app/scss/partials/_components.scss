@@ -3,4 +3,15 @@
     background: $zone-blue;
     color: $white;
     height: 450px;
+
+    #zoneTotal {
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+        font-size: 3em;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        top: 100px;
+    }
 }

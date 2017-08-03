@@ -1,8 +1,10 @@
-var partyZone = angular.module('partyZone', []);
+var partyZone = angular.module('partyZone', ['ui.router']);
 
-partyZone.controller('partyZoneController', function partyZoneController(){
-   
-});
+partyZone.controller('partyZoneController', ['$scope', function($scope){
+    $scope.title = 'test';
+
+    var total = 5;
+}]);
 
 partyZone.component('zoneOverview', {
     templateUrl: 'templates/overview.html',
@@ -10,6 +12,26 @@ partyZone.component('zoneOverview', {
         name: "<"
     },
     controller: function() {
+        console.log(this.name)
+    }
+});
+
+partyZone.component('zonesAll', {
+    template: 'test',
+    bindings: {
+        name: "<"
+    },
+    controller: function(){
+        console.log(this.name)
+    }
+});
+
+partyZone.component('zoneSettings', {
+    template: 'settings',
+    bindings: {
+        name: "<"
+    },
+    controller: function(){
         console.log(this.name)
     }
 });
