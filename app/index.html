@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="./css/style.css?v=1.0.0">
 </head>
 <body data-ng-controller="partyZoneController as ctrl">
-    <header id="header" ng-include="'includes/header.html'"></header>
+    <header id="header" data-ng-include="'includes/header.html'"></header>
 
     <zone-overview></zone-overview>
+
+    <footer id="footer" data-ng-include="'includes/footer.html'"></footer>
 
     <script src="./js/bundle.min.js"></script>
 </body>
