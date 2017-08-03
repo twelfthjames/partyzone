@@ -15,3 +15,20 @@
         top: 100px;
     }
 }
+
+#zonesAll {
+    .zone {
+        @include boxShadow;
+        background: $white;
+        margin: 0 0 1em 0;
+        height: 200px;
+        width: 550px;
+    }
+    #menuBoard {
+        float: left;
+    }
+
+    #pastZones {
+        float: right;
+    }
+}

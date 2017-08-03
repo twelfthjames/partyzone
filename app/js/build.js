@@ -17,7 +17,7 @@ partyZone.component('zoneOverview', {
 });
 
 partyZone.component('zonesAll', {
-    template: 'test',
+    templateUrl: 'templates/zones.html',
     bindings: {
         name: "<"
     },
