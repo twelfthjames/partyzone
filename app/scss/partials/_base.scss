@@ -1,6 +1,12 @@
 body {
     background: $zone-grey;
     color: $black;
+    font-family: $main-font;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
 }
 
 #header {
@@ -28,6 +34,7 @@ body {
     background: $black;
     color: $white;
     height: 100px;
+    text-align: center;
 
     #legal {
         ul {
