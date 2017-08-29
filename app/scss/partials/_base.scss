@@ -38,8 +38,14 @@ body {
     text-align: center;
 
     #footerLogo {
+        opacity: 0.8;
         float: right;
         margin: 0.7em 0 0 0;
+        transition: .3s linear all;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     #legal {

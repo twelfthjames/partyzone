@@ -36,6 +36,7 @@
   "dependencies": {
     "@uirouter/angularjs": "^1.0.3",
     "angular": "^1.6.5",
-    "angular-ui-router": "^1.0.3"
+    "angular-ui-router": "^1.0.3",
+    "angularfire": "^2.3.0"
   }
 }

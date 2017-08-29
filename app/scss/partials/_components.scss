@@ -8,27 +8,79 @@
         position: relative;
         margin: 0 auto;
         left: 0;
-        font-size: 3em;
+        font-size: 2.4em;
         bottom: 0;
         right: 0;
         text-align: center;
-        top: 100px;
+        top: 80px;
+
+        #zoneCount {
+            font-size: 2em;
+            line-height: 0;
+        }
     }
 }
 
 #zonesAll {
     .zone {
-        @include boxShadow;
+        clear: left;
+        box-shadow: 0 1px 1px rgba(160, 160, 160, 0.4);
+        border-radius: 2px;
         background: $white;
         margin: 0 0 1em 0;
         height: 200px;
         width: 550px;
+
+        &.past {
+            background: none;
+            border: dashed 2px rgba(206, 206, 206, 0.46);
+            box-shadow: none;
+
+            p {
+                text-align: center;
+                font-size: 1.8em;
+                color: #807979;
+            }
+        }
+
+        .zoneDate {
+            float: left;
+            padding: 0.5em;
+            font-size: 2.2em;
+            text-align: center;
+            width: 60px;
+        }
+
+        .zoneDetails {
+            display: inline-block;
+            margin: 0.5em;
+            height: 90%;
+            border-left: 1px solid rgba($black, 0.4);
+
+            .zoneName {
+                font-size: 1.7em;
+                text-align: left;
+                padding: 0.5em;
+            }
+
+            .zoneVenue {
+                font-size: 1.3em;
+                font-style: italic;
+                text-align: left;
+                padding: 0.5em;
+            }
+        }
     }
+
     #menuBoard {
         float: left;
     }
 
     #pastZones {
         float: right;
+
+        h1 {
+            text-align: right;
+        }
     }
 }
