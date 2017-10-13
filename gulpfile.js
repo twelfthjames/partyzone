@@ -6,7 +6,7 @@ const gulp = require('gulp'),
       rename = require('gulp-rename'),
       uglify = require('gulp-uglify'),
       watch = require('gulp-watch');
-      
+
 gulp.task('minify', function(){
     return gulp.src('app/**/*.html')
         .pipe(minifyHtml({collapseWhitespace: true}))
@@ -25,7 +25,7 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('serve', function(){
-    var server = gls.static(['build']);
+    var server = gls.new('server.js');
     server.start();
 
     return watch(['build/**/*.css', 'build/**/*.html', 'build/**/*.js'], function(file){
