@@ -3,7 +3,7 @@ const express = require('express'),
 
 const app = express();
 
-
+app.use(express.static(__dirname + '/build'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 const router = express.Router();
 
 router.get('/', function(req, res){
-    res.json({ message: 'hooray! welcome to our api!' });    
+    res.json({ message: 'hooray! welcome to our api!' });
 });
 
 app.use('/test', router);
@@ -21,3 +21,4 @@ console.log('Party Zone Server running on ' + port);
 
 // BASE SETUP
 // =============================================================================
+
