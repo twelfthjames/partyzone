@@ -1,7 +1,7 @@
 var partyZone = angular.module('partyZone', []);
 
 partyZone.controller('partyZoneController', ['$scope', function($scope) {
-    $scope.city = 'Richmond';
+    $scope.city = 'richmond';
 }]);
 
 partyZone.component('zoneOverview', {
@@ -13,7 +13,7 @@ partyZone.component('zoneOverview', {
 });
 
 partyZone.controller('zoneOverview', ['$scope', function($scope){
-    $scope.total = "2";
+    $scope.total = "4";
 }]);
 
 
@@ -35,14 +35,20 @@ partyZone.component('zonesAll', {
 partyZone.controller('allZones', ['$scope', function($scope) {
     $scope.test = 'test';
     $scope.zones = [
-        {name: 'The Friend Zone', venue: 'The Veil Brewing Co.', date: new Date('09/07/2017')},
-        {name: 'PZ Launch Party', venue: 'Kabana Rooftop Lounge', date: new Date('02/01/2018')}
+        {sponsored: 'false', name: 'PZ Launch Party', venue: 'Kabana Rooftop Lounge', date: new Date('02/01/2018'), count: '15'},
+        {sponsored: 'false', name: 'Halloween Celebration', venue: 'Twelfth & James Studios', date: new Date('10/31/2017'), count: '2'}
     ];
 
     $scope.past = [
-      {name: 'Past Zone 1'}  
+    //   {name: 'Past Zone 1'}  
     ];
     $scope.noPast = 'Once you complete your first PZ, you\'ll be able to get a recap here!';
+
+    $scope.rsvp = false;
+
+    $scope.$watch('rsvp', function(){
+        $scope.toggleText = $scope.rsvp ? 'rsvp!' : 'Going!';
+    })
 }]);
 
 

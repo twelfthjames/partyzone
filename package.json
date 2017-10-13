@@ -19,6 +19,7 @@
   "homepage": "https://github.com/twelfthjames/partyzone#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-awspublish": "^3.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-jscs": "^4.0.0",
@@ -37,6 +38,7 @@
     "@uirouter/angularjs": "^1.0.3",
     "angular": "^1.6.5",
     "angular-ui-router": "^1.0.3",
-    "angularfire": "^2.3.0"
+    "angularfire": "^2.3.0",
+    "body-parser": "^1.18.2"
   }
 }

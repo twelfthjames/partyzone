@@ -2,13 +2,23 @@
     <div class="container">
         <section id="menuBoard">
             <h1>Menu Board</h1>
+            <button class="createZoneBtn" ng-click="createZone();">Create a Zone</button><!-- /.createZoneBtn -->
             <section class="zone" data-ng-repeat="zone in zones | orderBy: 'date'">
+                <section class="sponsored" ng-if="sponsored == true">Sponsored</section><!-- /.sponsored -->
                 <section class="zoneDate">{{zone.date | date : 'MMM dd'}}</section><!-- /.zoneDate -->
 
                 <section class="zoneDetails">
                     <div class="zoneName">{{zone.name}}</div><!-- /.zoneName -->
                     <div class="zoneVenue">{{zone.venue}}</div><!-- /.zoneVenue -->
                 </section><!-- /.zoneDetails -->
+
+                <section class="zoneRSVP">
+                    <div class="count">
+                        {{zone.count}}
+                    </div><!-- /.count -->
+                    <p>Spots Remaining</p>
+                    <button class="count-me-in" ng-click="rsvp == rsvp">Count Me In!</button>
+                </section><!-- /.zoneRSVP -->
             </section><!-- /.zone -->
         </section><!-- /#menuBoard -->
         <section id="pastZones">

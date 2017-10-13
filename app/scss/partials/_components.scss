@@ -4,6 +4,11 @@
     color: $white;
     height: 450px;
 
+    &.richmond {
+        background: url('../img/skylines/richmond.jpg');
+        background-size: cover;
+    }
+
     #zoneTotal {
         position: relative;
         margin: 0 auto;
@@ -22,13 +27,14 @@
 }
 
 #zonesAll {
+
     .zone {
         clear: left;
         box-shadow: 0 1px 1px rgba(160, 160, 160, 0.4);
         border-radius: 2px;
         background: $white;
         margin: 0 0 1em 0;
-        height: 200px;
+        height: 130px;
         width: 550px;
 
         &.past {
@@ -46,34 +52,82 @@
         .zoneDate {
             float: left;
             padding: 0.5em;
-            font-size: 2.2em;
+            font-size: 1.5em;
             text-align: center;
             width: 60px;
         }
 
         .zoneDetails {
             display: inline-block;
-            margin: 0.5em;
+            margin: 0.5em 0;
             height: 90%;
-            border-left: 1px solid rgba($black, 0.4);
+            width: 320px;
+            border-left: 1px solid rgba(193,193,193, 0.4);
 
             .zoneName {
                 font-size: 1.7em;
                 text-align: left;
-                padding: 0.5em;
+                padding: 0.5em 0.5em 0;
             }
 
             .zoneVenue {
-                font-size: 1.3em;
+                font-size: 1em;
                 font-style: italic;
                 text-align: left;
+                padding: 0.7em 0 0 1em;
+            }
+        }
+
+        .zoneRSVP {
+            position: relative;
+            top: 15px;
+            right: 10px;
+            float: right;
+            width: 130px;
+            height: 100%;
+            text-align: center;
+
+            .count {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+
+            p {
+                color: darken($zone-grey, 20%);
+                font-size: 0.8em;
+            }
+
+            .count-me-in {
+                @include ghostBtn;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1em;
                 padding: 0.5em;
+                width: 100%;
             }
         }
     }
 
     #menuBoard {
         float: left;
+
+        h1 {
+            float: left;
+        }
+        
+        .createZoneBtn {
+            @include ghostBtn;
+            float: right;
+            position: relative;
+            top: 20px;
+            border-color: darken($zone-grey, 20%);
+            padding: 0.8em;
+            width: 200px;
+
+            &:hover {
+                background: darken($zone-grey, 3%);
+            }
+        }
     }
 
     #pastZones {

@@ -6,7 +6,7 @@ const gulp = require('gulp'),
       rename = require('gulp-rename'),
       uglify = require('gulp-uglify'),
       watch = require('gulp-watch');
-
+      
 gulp.task('minify', function(){
     return gulp.src('app/**/*.html')
         .pipe(minifyHtml({collapseWhitespace: true}))
