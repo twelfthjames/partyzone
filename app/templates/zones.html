@@ -17,7 +17,7 @@
                         {{zone.count}}
                     </div><!-- /.count -->
                     <p>Spots Remaining</p>
-                    <button class="count-me-in" ng-click="rsvp == rsvp">Count Me In!</button>
+                    <button class="count-me-in" ng-click="rsvpClick()" ng-init="countIn">{{countIn}}</button>
                 </section><!-- /.zoneRSVP -->
             </section><!-- /.zone -->
         </section><!-- /#menuBoard -->

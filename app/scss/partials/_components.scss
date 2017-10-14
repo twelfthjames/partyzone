@@ -138,3 +138,33 @@
         }
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .zone {
+        height: 180px !important;
+        width: 100% !important;
+    }
+    
+    .createZoneBtn {
+        width: 150px !important;
+    }
+
+    .zoneDate {
+        width: 80px !important;
+    }
+
+    .zoneRSVP {
+        top: -220px !important;
+        width: 133px !important;
+    }
+
+    .zoneRSVP .count {
+        float: left !important;
+    }
+
+    .zoneRSVP p {
+        font-size: 0.6em !important;
+        display: inline-block !important;
+        vertical-align: middle !important;
+    }
+}

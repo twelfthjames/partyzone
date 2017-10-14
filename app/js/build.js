@@ -13,7 +13,7 @@ partyZone.component('zoneOverview', {
 });
 
 partyZone.controller('zoneOverview', ['$scope', function($scope){
-    $scope.total = "4";
+    $scope.total = "2";
 }]);
 
 
@@ -44,11 +44,13 @@ partyZone.controller('allZones', ['$scope', function($scope) {
     ];
     $scope.noPast = 'Once you complete your first PZ, you\'ll be able to get a recap here!';
 
-    $scope.rsvp = false;
+    $scope.countIn = "Count Me In!";
+    
+    $scope.rsvpClick = function($rsvp){
+        $rsvp.countIn = "See ya there.";
+    };
 
-    $scope.$watch('rsvp', function(){
-        $scope.toggleText = $scope.rsvp ? 'rsvp!' : 'Going!';
-    })
+
 }]);
 
 

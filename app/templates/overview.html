@@ -1,9 +1,12 @@
 <section id="zoneOverview" ng-class="'richmond'" data-ng-controller="zoneOverview">
     <div class="container">
         <section id="zoneTotal">
-            <p>There are</p>
-            <p id="zoneCount">{{zones.length}}</p>
-            <p>Party Zones Nearby!</p>
+            <p>There 
+                <span ng-if="total == '1'">is</span>
+                <span ng-if="total >= '2'">are</span>
+            </p>
+            <p id="zoneCount">{{total}}</p>
+            <p>Party Zone<span ng-if="total >= '2'">s</span> Nearby!</p>
         </section><!-- /#zoneTotal -->
     </div><!-- /.container -->
 </section><!-- /#zoneOverview -->
