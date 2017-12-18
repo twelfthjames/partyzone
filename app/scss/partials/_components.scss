@@ -99,6 +99,7 @@
 
             .count-me-in {
                 @include ghostBtn;
+                background: #0a6588;
                 text-transform: uppercase;
                 font-weight: bold;
                 font-size: 1em;

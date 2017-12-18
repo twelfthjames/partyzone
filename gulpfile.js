@@ -28,7 +28,7 @@ gulp.task('serve', function(){
     var server = gls.new('server.js');
     server.start();
 
-    return watch(['build/**/*.css', 'build/**/*.html', 'build/**/*.js'], function(file){
+    return watch(['build/**/*'], function(file){
         server.notify.apply(server, [file]);
     });
 });
